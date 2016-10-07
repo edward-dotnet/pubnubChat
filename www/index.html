@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection"
+              content="telephone=no" />
+        <meta name="msapplication-tap-highlight"
+              content="no" />
+        <meta name="viewport"
+              content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- Required libraries for the chat -->
+        <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+        <script src="https://cdn.pubnub.com/pubnub-crypto.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+        <script src="http://pubnub.github.io/pubnub-angular/lib/pubnub-angular.js"></script>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="css/cssload.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <script type="text/javascript" src="js/chance.min.js"></script>
+        <script type="text/javascript" src="js/pubnubAngularApp.js"></script>
+
+        <title>Cross Platform iOS Android Chat App</title>
+    </head>
+
+    <body>
+
+
+
+        <div class="cssload-loader">
+        	<div class="cssload-square cssload-square--main">
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        			<div class="cssload-square cssload-square--mini"></div>
+        	</div>
+        </div>
+
+
+
+
+        <div class="container" ng-app="myApp" ng-controller="ChatCtrl">
+            <br />
+            <h4>Online Users</h4>
+            <ul>
+                <li ng-repeat="user in users">{{user}}</li>
+            </ul>
+            <br />
+            <h4>Chat History ({{messages.length}})</h4>
+            <br />
+            <div class="well">
+                <ul>
+                    <li ng-repeat="message in messages">{{message}}</li>
+                </ul>
+            </div>
+            <form ng-submit='publish()'>
+                <input type="text" ng-model='newMessage' class="msgtxtbox" maxlength="40"/>
+                <input type="submit" value="Send" class="msgsubmit" />
+            </form>
+
+        </div>
+
+
+                <div class="cssload-loader">
+                	<div class="cssload-square cssload-square--main">
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                			<div class="cssload-square cssload-square--mini"></div>
+                	</div>
+                </div>
+
+
+    </body>
+</html>
